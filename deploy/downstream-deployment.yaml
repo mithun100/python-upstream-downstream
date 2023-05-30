@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-downstream-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-downstream-app
+  template:
+    metadata:
+      labels:
+        app: python-downstream-app
+    spec:
+      containers:
+        - name: python-downstream-app
+          image: mithun100/python-downstream-app
+          ports:
+            - containerPort: 5000
+

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-upstream-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-upstream-app
+  template:
+    metadata:
+      labels:
+        app: python-upstream-app
+    spec:
+      containers:
+        - name: python-upstream-container
+          image: mithun100/python-upstream-app:latest
+          ports:
+            - containerPort: 5000
