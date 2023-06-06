@@ -10,5 +10,9 @@ echo "Deploying upstream application..."
 kubectl apply -f upstream-deployment.yaml
 kubectl apply -f upstream-service.yaml
 
+# # Deploy loadgen
+#  echo "Deploying loadgen job..."
+# kubectl apply -f loadgen-job.yaml
+
 echo "Deployment completed!"
 
