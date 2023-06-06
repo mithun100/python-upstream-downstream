@@ -20,5 +20,11 @@ docker build --no-cache -t "${DOCKERHUB_USERNAME}/python-upstream-app:${IMAGE_TA
 echo "Pushing upstream-app Docker image..."
 docker push "${DOCKERHUB_USERNAME}/python-upstream-app:${IMAGE_TAG}"
 
+# echo "Building loadgen"
+# docker build --no-cache -t "${DOCKERHUB_USERNAME}/loadgen-image:${IMAGE_TAG}" -f ../loadgen/Dockerfile ../loadgen
+#
+# echo "Pushing loadgent Docker image..."
+# docker push "${DOCKERHUB_USERNAME}/loadgen-image:${IMAGE_TAG}"
+
 echo "Images have been built and pushed to Docker Hub successfully!"
 
